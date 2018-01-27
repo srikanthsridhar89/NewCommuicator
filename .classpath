@@ -22,7 +22,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/ssridhar/Downloads/selenium-server-standalone-3.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/ssridhar/Downloads/testng-6.9.10.jar"/>
+	<classpathentry kind="lib" path="D:/stuff/selenium-server-standalone-3.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Automation/Downloads/extentreports-2.40.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

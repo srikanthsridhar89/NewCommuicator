@@ -6,14 +6,4 @@
       <class name="com.callidussoftware.com.NewCommuicator.dispute.SubmitDispute"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.callidussoftware.com.NewCommuicator.dispute.SubmitDispute">
-        <methods>
-          <include name="launchbrowser"/>
-          <include name="payeedispute"/>
-        </methods>
-      </class> <!-- com.callidussoftware.com.NewCommuicator.dispute.SubmitDispute -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
