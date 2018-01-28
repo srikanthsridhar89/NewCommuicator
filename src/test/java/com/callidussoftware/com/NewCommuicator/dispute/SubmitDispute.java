@@ -34,8 +34,9 @@ public class SubmitDispute {
 
 	@Test
 	public  void payeedispute() throws InterruptedException, IOException {
-		logger = report.startTest("passTest");
-		Login l=new Login(driver, logger);
+		logger = report.startTest("Dispute");
+		
+	    Login l=new Login(driver, logger);
 		l.openapp();
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[href='#!/disputes']")));

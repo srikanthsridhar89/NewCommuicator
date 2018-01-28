@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57532" started-at="2018-01-27T16:54:19Z" finished-at="2018-01-27T16:55:17Z">
+  <suite name="Default suite" duration-ms="47978" started-at="2018-01-28T05:41:49Z" finished-at="2018-01-28T05:42:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="57532" started-at="2018-01-27T16:54:19Z" finished-at="2018-01-27T16:55:17Z">
+    <test name="Default test" duration-ms="47978" started-at="2018-01-28T05:41:49Z" finished-at="2018-01-28T05:42:37Z">
       <class name="com.callidussoftware.com.NewCommuicator.dispute.SubmitDispute">
-        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:com.callidussoftware.com.NewCommuicator.dispute.SubmitDispute@1ef45e3]" name="launchbrowser" is-config="true" duration-ms="27023" started-at="2018-01-27T22:24:19Z" finished-at="2018-01-27T22:24:46Z">
+        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:com.callidussoftware.com.NewCommuicator.dispute.SubmitDispute@1ef45e3]" name="launchbrowser" is-config="true" duration-ms="23005" started-at="2018-01-28T11:11:49Z" finished-at="2018-01-28T11:12:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchbrowser -->
-        <test-method status="PASS" signature="payeedispute()[pri:0, instance:com.callidussoftware.com.NewCommuicator.dispute.SubmitDispute@1ef45e3]" name="payeedispute" duration-ms="28343" started-at="2018-01-27T22:24:46Z" finished-at="2018-01-27T22:25:15Z">
+        <test-method status="PASS" signature="payeedispute()[pri:0, instance:com.callidussoftware.com.NewCommuicator.dispute.SubmitDispute@1ef45e3]" name="payeedispute" duration-ms="23211" started-at="2018-01-28T11:12:12Z" finished-at="2018-01-28T11:12:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- payeedispute -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.callidussoftware.com.NewCommuicator.dispute.SubmitDispute@1ef45e3]" name="TearDown" is-config="true" duration-ms="2132" started-at="2018-01-27T22:25:15Z" finished-at="2018-01-27T22:25:17Z">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.callidussoftware.com.NewCommuicator.dispute.SubmitDispute@1ef45e3]" name="TearDown" is-config="true" duration-ms="1721" started-at="2018-01-28T11:12:36Z" finished-at="2018-01-28T11:12:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

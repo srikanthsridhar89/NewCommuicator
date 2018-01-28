@@ -27,6 +27,10 @@ public class ExtentRepo {
 			String Path = System.getProperty("user.dir") + "/Reports/Communicator"+dateFormat.format(date)+".html";
 		//	reporter = new ExtentReports(Path, false, DisplayOrder.OLDEST_FIRST);
 			reporter = new ExtentReports(Path);
+			reporter.addSystemInfo("Host Name","10.131.130.195");
+			reporter.addSystemInfo("Environemt Name","2018.1");
+		
+			
 		}
 	
 		}catch(Exception e){
