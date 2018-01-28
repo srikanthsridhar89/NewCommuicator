@@ -49,6 +49,7 @@ public class SubmitDispute {
 		select.selectByVisibleText("Incentive Request");
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
+		logger.log(LogStatus.INFO, "disputes submitted successfully");
 		Thread.sleep(2000);
 		driver.close();
 	}

@@ -24,7 +24,7 @@ public class Launch {
 		if (browser.equalsIgnoreCase("chrome")) {
 
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\selenium\\drivers\\new\\chromedriver.exe");
+					"C:\\Users\\ssridhar\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
 			driver = new ChromeDriver();
 			
 			driver.get(Testreader.geturl());
