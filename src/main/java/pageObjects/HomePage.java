@@ -6,16 +6,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+import automationframework.ExtentRepo;
+
 public class HomePage {
 	
-	private String browser;
 	public WebDriver driver;
-	public HomePage(WebDriver driver){
-		this.driver=driver;
-		
-	}
-	public void homepage() {
+	public ExtentTest logger;
 
+	public HomePage(WebDriver driver, ExtentTest logger){
+		
+		this.driver=driver;
+		this.logger = logger;
+	}
+	public void homepage(ExtentTest logger) {
+		
 		try {
 
 			String pagetitle = driver.getTitle();
@@ -23,7 +31,9 @@ public class HomePage {
 				WebElement title = driver.findElement(By.xpath("//span[1][contains(text(),'Sales Performance Home')]"));
 				WebDriverWait wait = new WebDriverWait(driver, 20);
 				wait.until(ExpectedConditions.textToBePresentInElementValue(title, "SalesPerformance Home"));
+				logger.log(LogStatus.INFO, "Welcome to Sales Performance Home");
 			}
+			//logger.log(LogStatus.INFO, "Welcome to Sales Performance Home");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
