@@ -1,0 +1,17 @@
+{
+
+"ManageApprovalComments":"Manager Approved"
+"PayeeCancelledComments":"Payee Cancelled"
+"ManagerDenyComments":"Manager Denied Dispute"
+"PayeeRespondedComments":"Payee Responded to Dispute"
+"ManageInquiryComments":"Manager Sent Inquiry to Payee"
+"AdminResolvedComments":"Admin Resolved Dispute"
+"AdminDenyComments":"Admin Denied Dispute"
+"AdminSentInquirytoPayeeComments":"Admin Sent Inquiry to Payee"
+"AdminSentInquirytoManagerComments":"Admin Sent Inquiry to Manager"
+"ManagerRespondedComments":"Manager Responded to Inquiry"
+"DisputeType" : "Incentive Inquiry"
+
+}
+
+

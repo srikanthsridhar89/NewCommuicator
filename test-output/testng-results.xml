@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="237669" started-at="2018-03-09T04:59:19Z" finished-at="2018-03-09T05:03:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="237669" started-at="2018-03-09T04:59:19Z" finished-at="2018-03-09T05:03:17Z">
+      <class name="DisputeEndtoEndFlow_DisputeTab.PayeeRespondingtoAdminInquiry">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:DisputeEndtoEndFlow_DisputeTab.PayeeRespondingtoAdminInquiry@11161c7]" name="setUp" is-config="true" duration-ms="113153" started-at="2018-03-09T10:29:19Z" finished-at="2018-03-09T10:31:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Admin_InquirytoManager()[pri:0, instance:DisputeEndtoEndFlow_DisputeTab.PayeeRespondingtoAdminInquiry@11161c7]" name="Admin_InquirytoManager" duration-ms="122586" started-at="2018-03-09T10:31:12Z" finished-at="2018-03-09T10:33:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Admin_InquirytoManager -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:DisputeEndtoEndFlow_DisputeTab.PayeeRespondingtoAdminInquiry@11161c7]" name="teardown" is-config="true" duration-ms="1893" started-at="2018-03-09T10:33:15Z" finished-at="2018-03-09T10:33:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- DisputeEndtoEndFlow_DisputeTab.PayeeRespondingtoAdminInquiry -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
