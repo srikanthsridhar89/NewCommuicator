@@ -7,8 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
-import com.relevantcodes.extentreports.LogStatus;
-
 public class UtilityFunctions {
 
 	public static String get_ToDayDate()
@@ -54,7 +52,8 @@ public class UtilityFunctions {
         Thread.sleep(10000);
         File fl = new File(dir);
         File[] files = fl.listFiles(new FileFilter() {         
-               public boolean accept(File file) {
+               @Override
+			public boolean accept(File file) {
                      return file.isFile();
                }
         });

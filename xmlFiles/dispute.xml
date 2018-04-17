@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="tests">
+ <test name="chromeTest">
+ 
+
+ 
+ <classes>
+ 
+ <class name="DisputeEndtoEndFlow_DisputeTab.SubmitDispute" />
+ 
+ 
+ 
+ 
+ </classes>
+ 
+ </test> 
+ </suite>

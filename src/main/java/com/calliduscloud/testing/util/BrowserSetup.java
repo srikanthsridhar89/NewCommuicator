@@ -4,7 +4,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -72,6 +71,7 @@ public class BrowserSetup
 			}
 			driver.get(url);
 			driver.manage().window().maximize();
+		
 			break;
 		case "FIREFOX" :
 			FirefoxProfile profile = new FirefoxProfile();

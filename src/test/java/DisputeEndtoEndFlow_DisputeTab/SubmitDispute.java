@@ -2,6 +2,10 @@ package DisputeEndtoEndFlow_DisputeTab;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -21,10 +25,7 @@ import com.calliduscloud.testing.util.SeleniumMethods;
 public class SubmitDispute {
 
 
-
-
-
-	@BeforeClass
+@BeforeClass
 	public  void setUp() throws Exception
 	{
 		SeleniumMethods.initilization("SubmitDispute");
@@ -56,12 +57,17 @@ public class SubmitDispute {
 			NewDisputePage NewDispute=new NewDisputePage();
 			NewDispute.click_NewDispute();
 			
+		
+              Thread.sleep(4000);
 			//Enter the details  Dispute
 			DisputePage DisputeCreation=new DisputePage();
 			DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
-			SeleniumMethods.staticwait(2000);
-			
+		
+		
+		
+		
 			DisputeCreation.click_submit();
+			SeleniumMethods.staticwait(3000);
 			
 			//Verify Dispute Submitted
 			MyDisputePage MyDisp=new MyDisputePage();

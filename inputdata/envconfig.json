@@ -1,15 +1,16 @@
 {
 "Browser" : "CHROME"
-"ApplicationUrl": "https://ca1-lvcomapp-int3.callidussoftware.com:444/SalesPortal/#!/"
-"UserName" :"npcpayee"
+"ApplicationUrl": "https://ca1-lvcomapp-int4.callidussoftware.com:444/SalesPortal/#!/"
+"UserName" :"sripayee"
 "Password" : "Srikanth123"
-"Mgrname": "npcmgr"
+"Mgrname": "srimgr"
 "Mgrpassword": "Srikanth123"	
 "AdminUser":"Administrator"
 "AdminPassword":"Administrator"
 "PortalAdminUser":"PortalAdmin"
 "PortalAdminPassword":"PortalAdmin"
 "remotemachine" : "http://localhost:4444/wd/hub"
+
 
 "PayeeRespondComments":"Payee Responding to ManagerInquiry"
 "chromedriverLocation" : "C:\\selenium\\drivers\\latestdriver\\chromedriver.exe"

@@ -50,10 +50,13 @@ public class AdminDenyingDispute {
 			NewDisputePage NewDispute=new NewDisputePage();
 			NewDispute.click_NewDispute();
 			
+			
+			Thread.sleep(3000);
 			//Enter the details  Dispute
 			DisputePage DisputeCreation=new DisputePage();
+			SeleniumMethods.wait_untilPageLoads();
 			DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
-			SeleniumMethods.staticwait(2000);
+		
 			
 			DisputeCreation.click_submit();
 			
@@ -62,9 +65,14 @@ public class AdminDenyingDispute {
 			
 			Assert.assertEquals("Pending Approval", MyDisp.Get_ApprovalStatusText());
 			
-		//Click on Logout
+			//Verify Dispute Submitted
+			//MyDisputePage MyDisp=new MyDisputePage();
+			DisputeDetailPage DisputeDetail=new DisputeDetailPage();
+			DisputeDetail.check_DisputeDetail();
+			Assert.assertEquals("Pending Approval", MyDisp.Get_ApprovalStatusText());
+			//Click on Logout
 			salesperformancehome.click_Logout();
-		
+			
 			//Login into SalesPortal as Payee's Manager
 			loginPage.Login(JsonReader.readJson("envconfig","Mgrname"),JsonReader.readJson("envconfig","Mgrpassword"));
 			//Click on Login
@@ -76,7 +84,7 @@ public class AdminDenyingDispute {
 			Dispute.click_DisputeTab();
 
 			//Select the Dispute and Approve
-			DisputeDetailPage DisputeDetail=new DisputeDetailPage();
+		
 			
 			DisputeDetail.check_DisputeDetail();
 			//Click on Dispute Detail
@@ -88,16 +96,11 @@ public class AdminDenyingDispute {
 			DisputeDetail.typecomments(JsonReader.readJson("Dispute//Disputeinput","ManageApprovalComments"));
 			//Click on Ok
 			DisputeDetail.click_Okbutton();
-			
 			//Click on Cancel
 			DisputeDetail.click_Cancelbutton();
-			
-			
 			//Verify Dispute After Appproval
 			DisputeDetail.check_DisputeDetail();
-			
 			Assert.assertEquals("Pending Adjustment", MyDisp.Get_DisputeAdjustmentStatusText());
-			
 			//Click on Logout
 			salesperformancehome.click_Logout();
 			

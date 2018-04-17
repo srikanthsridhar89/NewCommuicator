@@ -1,6 +1,5 @@
 package DisputeEndtoEndFlow_DisputeTab;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -48,11 +47,12 @@ public class ManagerDeniedDispute {
 			//Click on New Dispute
 			NewDisputePage NewDispute=new NewDisputePage();
 			NewDispute.click_NewDispute();
-			
+			Thread.sleep(3000);
 			//Enter the details  Dispute
 			DisputePage DisputeCreation=new DisputePage();
+			
 			DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
-			SeleniumMethods.staticwait(2000);
+			SeleniumMethods.staticwait(4000);
 			
 			DisputeCreation.click_submit();
 			

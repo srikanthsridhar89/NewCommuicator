@@ -1,11 +1,6 @@
 package com.calliduscloud.testing.Communicator;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-
-import com.calliduscloud.testing.util.JsonReader;
-import com.calliduscloud.testing.util.ReportTemplate;
 import com.calliduscloud.testing.util.SeleniumMethods;
-import com.calliduscloud.testing.util.UtilityFunctions;
 
 
 /**

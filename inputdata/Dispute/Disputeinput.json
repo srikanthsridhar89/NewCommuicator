@@ -1,5 +1,4 @@
 {
-
 "ManageApprovalComments":"Manager Approved"
 "PayeeCancelledComments":"Payee Cancelled"
 "ManagerDenyComments":"Manager Denied Dispute"
@@ -10,8 +9,18 @@
 "AdminSentInquirytoPayeeComments":"Admin Sent Inquiry to Payee"
 "AdminSentInquirytoManagerComments":"Admin Sent Inquiry to Manager"
 "ManagerRespondedComments":"Manager Responded to Inquiry"
+"TextFile":"C:\\Users\\ssridhar\\Desktop\\AutomationFileUpload\\workflowautomation.txt"
+"ImageFile":"C:\\Users\\Public\\Pictures\\Sample Pictures\\Tulips.jpg"
+"PdfFile":"C:\\Users\\ssridhar\\Desktop\\AutomationFileUpload\\portalonlinehelp.pdf"
+"XmlFile":"C:\\Users\\ssridhar\\Desktop\\AutomationFileUpload\\acmeplan.xml"
+"DocFile":"C:\\Users\\ssridhar\\Desktop\\AutomationFileUpload\\salesuiquery.doc"
+"ExcelFile":"C:\\Users\\ssridhar\\Desktop\\AutomationFileUpload\\b04.1installationguide.xlsx"
 "DisputeType" : "Incentive Inquiry"
-
+"USDUnittype":"45"
+"ThaiUnittype":"70"
+"PercentUnittype":"60"
+"QuantityUnittype":"85"
+"IntegerUnittype":"28"
 }
 
 

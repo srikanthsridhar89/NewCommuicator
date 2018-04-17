@@ -102,7 +102,7 @@ public class SeleniumMethods
 
 	public static void execute_javaScript(String code)
 	{
-		JavascriptExecutor script=(JavascriptExecutor) SeleniumMethods.getDriver();
+		JavascriptExecutor script=SeleniumMethods.getDriver();
 		script.executeScript(code);
 	}
 
@@ -114,7 +114,7 @@ public class SeleniumMethods
 	public static void selectByVisibleText(By by,String value,String fieldName)
 	{
 
-		waitForElementPresent(by);
+		waitForElementPresent(by,100);
 		Select select=new Select(SeleniumMethods.getDriver().findElement(by));
 		select.selectByVisibleText(value);
 		SeleniumMethods.getLogger().log(LogStatus.INFO, "Selected "+value+" from Drop Down List of fieldName"+fieldName);
@@ -337,6 +337,12 @@ public class SeleniumMethods
 		WebDriverWait wait=new WebDriverWait(SeleniumMethods.getDriver(),time);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 	}
+	
+	public static void waitForElementPresentToselect(By by)
+	{
+		WebDriverWait wait=new WebDriverWait(SeleniumMethods.getDriver(),time);
+		wait.until(ExpectedConditions.elementToBeSelected(by));
+	}
 
 	public static void waitForElementToBeClickable(By by)
 	{
@@ -496,7 +502,7 @@ public class SeleniumMethods
 
 	public static String captureScreenshot(RemoteWebDriver driver,String ImagesPath)
 	{
-		TakesScreenshot oScn = (TakesScreenshot) SeleniumMethods.getDriver();
+		TakesScreenshot oScn = SeleniumMethods.getDriver();
 		File oScnShot = oScn.getScreenshotAs(OutputType.FILE);
 		File oDest = new File(ImagesPath+".jpg");
 		try {
@@ -548,7 +554,7 @@ public class SeleniumMethods
 			System.out.println(paths[paths.length-1]);
 		}
 		String image= SeleniumMethods.getLogger().addScreenCapture(paths[paths.length-1]);
-		SeleniumMethods.getLogger().log(LogStatus.FAIL,e.toString().substring(0,150));
+		SeleniumMethods.getLogger().log(LogStatus.FAIL,e.toString().substring(0,100));
 		SeleniumMethods.getLogger().log(LogStatus.FAIL, image);
 		Assert.fail("Failed TestCase"+result.getName());	
 	}
@@ -575,7 +581,7 @@ public class SeleniumMethods
 	{
 		waitForElementPresent(by);	
 		System.out.println("Entered in to this method");
-		JavascriptExecutor executor = (JavascriptExecutor)SeleniumMethods.getDriver();
+		JavascriptExecutor executor = SeleniumMethods.getDriver();
 		executor.executeScript("arguments[0].click();",SeleniumMethods.getDriver().findElement(by));
 		SeleniumMethods.getLogger().log(LogStatus.INFO, "Clicking on "+fieldName);
 	}

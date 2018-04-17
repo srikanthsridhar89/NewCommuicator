@@ -27,7 +27,7 @@ public class PayeeRespondedtoManagerInquiry {
 
 
 		@Test
-		public void ManagerSentInquiry(){
+		public void PayeeResponding_Dispute(){
 
 		
 			try{
@@ -49,7 +49,7 @@ public class PayeeRespondedtoManagerInquiry {
 				//Click on New Dispute
 				NewDisputePage NewDispute=new NewDisputePage();
 				NewDispute.click_NewDispute();
-				
+				Thread.sleep(3000);
 				//Enter the details  Dispute
 				DisputePage DisputeCreation=new DisputePage();
 				DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
