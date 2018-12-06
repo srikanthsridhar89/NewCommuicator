@@ -2,6 +2,8 @@ package com.calliduscloud.testing.Communicator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.calliduscloud.testing.util.JsonReader;
 import com.calliduscloud.testing.util.SeleniumMethods;
@@ -20,7 +22,9 @@ public class DisputePage {
 		
 		
 	//	SeleniumMethods.waitForElementPresentToselect(DisputeTypeSelector);
-		SeleniumMethods.staticwait(3000);
+		//SeleniumMethods.staticwait(3000);
+		WebDriverWait wait=new WebDriverWait(SeleniumMethods.getDriver(),30);
+		wait.until(ExpectedConditions.elementToBeClickable(DisputeTypeSelector));
 		SeleniumMethods.selectByVisibleText(DisputeTypeSelector, disputetype.trim(), "Incentive Request is Selected");
 		
 		}
@@ -80,7 +84,7 @@ public class DisputePage {
 	
 	public void click_submit(){
 		//Click on Submit
-		SeleniumMethods.staticwait(5000);
+		SeleniumMethods.staticwait(8000);
 		JavascriptExecutor js = (JavascriptExecutor) SeleniumMethods.getDriver();
 		js.executeScript("window.scrollBy(0,1000)");
 		//SeleniumMethods.submit(SubmitButton);

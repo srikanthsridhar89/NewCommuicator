@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="102412" started-at="2018-04-17T10:43:26Z" finished-at="2018-04-17T10:45:08Z">
+  <suite name="Default suite" duration-ms="102905" started-at="2018-07-18T04:55:24Z" finished-at="2018-07-18T04:57:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="102412" started-at="2018-04-17T10:43:26Z" finished-at="2018-04-17T10:45:08Z">
-      <class name="Documents.CreatePlanDocument">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Documents.CreatePlanDocument@6fa38a]" name="setUp" is-config="true" duration-ms="20030" started-at="2018-04-17T16:13:26Z" finished-at="2018-04-17T16:13:46Z">
+    <test name="Default test" duration-ms="102905" started-at="2018-07-18T04:55:24Z" finished-at="2018-07-18T04:57:07Z">
+      <class name="DisputeEndtoEndFlow_MessageTab.AdminDenied_Dispute">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:DisputeEndtoEndFlow_MessageTab.AdminDenied_Dispute@6fa38a]" name="setUp" is-config="true" duration-ms="23200" started-at="2018-07-18T10:25:24Z" finished-at="2018-07-18T10:25:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="PlanDocumentCreation()[pri:0, instance:Documents.CreatePlanDocument@6fa38a]" name="PlanDocumentCreation" duration-ms="82363" started-at="2018-04-17T16:13:46Z" finished-at="2018-04-17T16:15:08Z">
+        <test-method status="PASS" signature="DisputeApproval()[pri:0, instance:DisputeEndtoEndFlow_MessageTab.AdminDenied_Dispute@6fa38a]" name="DisputeApproval" duration-ms="78308" started-at="2018-07-18T10:25:47Z" finished-at="2018-07-18T10:27:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PlanDocumentCreation -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Documents.CreatePlanDocument@6fa38a]" name="teardown" is-config="true" duration-ms="1" started-at="2018-04-17T16:15:08Z" finished-at="2018-04-17T16:15:08Z">
+        </test-method> <!-- DisputeApproval -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:DisputeEndtoEndFlow_MessageTab.AdminDenied_Dispute@6fa38a]" name="teardown" is-config="true" duration-ms="1378" started-at="2018-07-18T10:27:06Z" finished-at="2018-07-18T10:27:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Documents.CreatePlanDocument -->
+      </class> <!-- DisputeEndtoEndFlow_MessageTab.AdminDenied_Dispute -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Documents.CreatePlanDocument">
+      <class name="DisputeEndtoEndFlow_MessageTab.ManagerResponded_AdminInquiry">
         <methods>
+          <include name="teardown"/>
+          <include name="DisputeApproval"/>
           <include name="setUp"/>
-          <include name="PlanDocumentCreation"/>
         </methods>
-      </class> <!-- Documents.CreatePlanDocument -->
+      </class> <!-- DisputeEndtoEndFlow_MessageTab.ManagerResponded_AdminInquiry -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

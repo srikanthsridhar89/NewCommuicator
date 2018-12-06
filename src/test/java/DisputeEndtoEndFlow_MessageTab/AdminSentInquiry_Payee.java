@@ -20,7 +20,7 @@ public class AdminSentInquiry_Payee {
 	@BeforeClass
 	public  void setUp() throws Exception
 	{
-		SeleniumMethods.initilization("AdminSentInquiry_Manager");
+		SeleniumMethods.initilization("AdminSentInquiry_Payee");
 	}
 	
 	@Test
@@ -48,16 +48,18 @@ public void DisputeApproval(){
 		NewDispute.click_NewDispute();
 		
 	
-          Thread.sleep(4000);
+         
 		//Enter the details  Dispute
 		DisputePage DisputeCreation=new DisputePage();
+		
+		SeleniumMethods.staticwait(5000);
 		DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
 	
-	
-	
+		
 	
 		DisputeCreation.click_submit();
-		SeleniumMethods.staticwait(3000);
+		
+		SeleniumMethods.staticwait(5000);
 		
 		//Verify Dispute Submitted
 		MyDisputePage MyDisp=new MyDisputePage();
@@ -112,9 +114,9 @@ public void DisputeApproval(){
 				//click on notification message
 				message.click_Message();
 			//Click on Sent Inquiry  
-				message.click_Inquiry();
+				message.select_payeeinquiry();
 				//EnterComments
-				DisputeDetail.typecomments(JsonReader.readJson("Dispute//Disputeinput","AdminSentInquirytoManagerComments"));
+				DisputeDetail.typecomments(JsonReader.readJson("Dispute//Disputeinput","AdminSentInquirytoPayeeComments"));
 				//Click on Ok
 				DisputeDetail.click_Okbutton();
 

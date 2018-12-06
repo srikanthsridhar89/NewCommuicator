@@ -51,16 +51,17 @@ public void Admin_InquirytoManager(){
 		NewDisputePage NewDispute=new NewDisputePage();
 		NewDispute.click_NewDispute();
 		
-		
-		Thread.sleep(3000);
+	
+         
 		//Enter the details  Dispute
 		DisputePage DisputeCreation=new DisputePage();
-		SeleniumMethods.wait_untilPageLoads();
+		
+		SeleniumMethods.staticwait(4000);
 		DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
 	
 		
+	
 		DisputeCreation.click_submit();
-		
 		//Verify Dispute Submitted
 		MyDisputePage MyDisp=new MyDisputePage();
 		

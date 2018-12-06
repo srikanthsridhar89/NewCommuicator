@@ -49,14 +49,16 @@ public class AdminResolvingDispute {
 			NewDisputePage NewDispute=new NewDisputePage();
 			NewDispute.click_NewDispute();
 			
-			
-			Thread.sleep(3000);
+		
+             
 			//Enter the details  Dispute
 			DisputePage DisputeCreation=new DisputePage();
-			SeleniumMethods.wait_untilPageLoads();
+			
+			SeleniumMethods.staticwait(4000);
 			DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
 		
 			
+		
 			DisputeCreation.click_submit();
 			
 			//Verify Dispute Submitted
@@ -88,6 +90,7 @@ public class AdminResolvingDispute {
 			DisputeDetail.check_DisputeDetail();
 			//Click on Dispute Detail
 			DisputeDetail.Click_DisputeDetail();
+			Thread.sleep(3000);
 			//Click on Approve 
 			DisputeDetail.click_Approve();
 			
@@ -102,7 +105,6 @@ public class AdminResolvingDispute {
 			Assert.assertEquals("Pending Adjustment", MyDisp.Get_DisputeAdjustmentStatusText());
 			//Click on Logout
 			salesperformancehome.click_Logout();
-		
 			
 			//Login in as Admininstrator into SalesPortal
 			loginPage.Login(JsonReader.readJson("envconfig","AdminUser"),JsonReader.readJson("envconfig","AdminPassword"));
@@ -118,7 +120,8 @@ public class AdminResolvingDispute {
 			DisputeDetail.check_DisputeDetail();
 			//Click on Dispute Detail
 			DisputeDetail.Click_DisputeDetail();
-			//Click on Resolved Button
+			Thread.sleep(3000);
+			//Click on Resolve  Button
 			DisputeDetail.click_AdminResolvedDispute();
 			//Enter Comments
 			DisputeDetail.typecomments(JsonReader.readJson("Dispute//Disputeinput","AdminResolvedComments"));
@@ -127,8 +130,6 @@ public class AdminResolvingDispute {
 			//Click on Cancel
 			
 			DisputeDetail.click_Cancelbutton();
-			
-		
 			
 		}
 		catch(Exception e)

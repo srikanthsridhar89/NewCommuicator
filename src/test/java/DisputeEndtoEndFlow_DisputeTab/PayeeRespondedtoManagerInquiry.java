@@ -49,14 +49,18 @@ public class PayeeRespondedtoManagerInquiry {
 				//Click on New Dispute
 				NewDisputePage NewDispute=new NewDisputePage();
 				NewDispute.click_NewDispute();
-				Thread.sleep(3000);
+				
+			
+	             
 				//Enter the details  Dispute
 				DisputePage DisputeCreation=new DisputePage();
+				
+				SeleniumMethods.staticwait(4000);
 				DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
-				SeleniumMethods.staticwait(2000);
+			
 				
+			
 				DisputeCreation.click_submit();
-				
 				//Verify Dispute Submitted
 				MyDisputePage MyDisp=new MyDisputePage();
 				
@@ -81,12 +85,15 @@ public class PayeeRespondedtoManagerInquiry {
 				DisputeDetail.check_DisputeDetail();
 				//Click on Dispute Detail
 				DisputeDetail.Click_DisputeDetail();
+				Thread.sleep(3000);
 				//Click on Send Inquiry 
 				DisputeDetail.click_SendInquiry();
 				//EnterComments
 				DisputeDetail.typecomments(JsonReader.readJson("Dispute//Disputeinput","ManageInquiryComments"));
 				//Click on Ok
 				DisputeDetail.click_Okbutton();
+				
+				SeleniumMethods.staticwait(3000);
 				//Click on Cancel
 				DisputeDetail.click_Cancelbutton();
 				

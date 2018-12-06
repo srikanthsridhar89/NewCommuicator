@@ -16,11 +16,11 @@ import com.calliduscloud.testing.util.JsonReader;
 import com.calliduscloud.testing.util.ReportTemplate;
 import com.calliduscloud.testing.util.SeleniumMethods;
 
-public class PayeeResponded_AdminInquiry {
+public class ManagerResponded_AdminInquiry {
 	@BeforeClass
 	public  void setUp() throws Exception
 	{
-		SeleniumMethods.initilization("AdminSentInquiry_Manager");
+		SeleniumMethods.initilization("Manager Responded to Admin Inquiry");
 	}
 	
 	@Test
@@ -48,16 +48,18 @@ public void DisputeApproval(){
 		NewDispute.click_NewDispute();
 		
 	
-          Thread.sleep(4000);
+         
 		//Enter the details  Dispute
 		DisputePage DisputeCreation=new DisputePage();
+		
+		SeleniumMethods.staticwait(5000);
 		DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
 	
-	
-	
+		
 	
 		DisputeCreation.click_submit();
-		SeleniumMethods.staticwait(3000);
+		
+		SeleniumMethods.staticwait(5000);
 		
 		//Verify Dispute Submitted
 		MyDisputePage MyDisp=new MyDisputePage();
@@ -122,9 +124,9 @@ public void DisputeApproval(){
 				//Click on Logout
 				salesperformancehome.click_Logout();
 				
-				SeleniumMethods.staticwait(3000);
+				SeleniumMethods.staticwait(4000);
 				//Enter User details 
-				loginPage.Login(JsonReader.readJson("envconfig","UserName"),JsonReader.readJson("envconfig","Password"));
+				loginPage.Login(JsonReader.readJson("envconfig","Mgrname"),JsonReader.readJson("envconfig","Mgrpassword"));
 				//Click on Login
 				loginPage.click_login();
 				SeleniumMethods.wait_untilPageLoads();

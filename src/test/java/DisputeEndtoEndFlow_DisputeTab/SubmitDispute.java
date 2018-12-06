@@ -58,16 +58,17 @@ public class SubmitDispute {
 			NewDispute.click_NewDispute();
 			
 		
-              Thread.sleep(4000);
+             
 			//Enter the details  Dispute
 			DisputePage DisputeCreation=new DisputePage();
+			
+			SeleniumMethods.staticwait(4000);
 			DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
 		
-		
-		
+			
 		
 			DisputeCreation.click_submit();
-			SeleniumMethods.staticwait(3000);
+			
 			
 			//Verify Dispute Submitted
 			MyDisputePage MyDisp=new MyDisputePage();

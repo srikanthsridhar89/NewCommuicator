@@ -49,25 +49,24 @@ public class ManagerApproved {
 			NewDisputePage NewDispute=new NewDisputePage();
 			NewDispute.click_NewDispute();
 			
-			
-			Thread.sleep(3000);
+		
+             
 			//Enter the details  Dispute
 			DisputePage DisputeCreation=new DisputePage();
-			SeleniumMethods.wait_untilPageLoads();
+			
+			SeleniumMethods.staticwait(4000);
 			DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
 		
 			
+		
 			DisputeCreation.click_submit();
+			
 			
 			//Verify Dispute Submitted
 			MyDisputePage MyDisp=new MyDisputePage();
-			
-			Assert.assertEquals("Pending Approval", MyDisp.Get_ApprovalStatusText());
-			
-			//Verify Dispute Submitted
-			//MyDisputePage MyDisp=new MyDisputePage();
 			DisputeDetailPage DisputeDetail=new DisputeDetailPage();
 			DisputeDetail.check_DisputeDetail();
+			
 			Assert.assertEquals("Pending Approval", MyDisp.Get_ApprovalStatusText());
 			//Click on Logout
 			salesperformancehome.click_Logout();
@@ -84,10 +83,11 @@ public class ManagerApproved {
 
 			//Select the Dispute and Approve
 		
-			
+			Thread.sleep(3000);
 			DisputeDetail.check_DisputeDetail();
 			//Click on Dispute Detail
 			DisputeDetail.Click_DisputeDetail();
+			
 			//Click on Approve 
 			DisputeDetail.click_Approve();
 			
@@ -95,6 +95,7 @@ public class ManagerApproved {
 			DisputeDetail.typecomments(JsonReader.readJson("Dispute//Disputeinput","ManageApprovalComments"));
 			//Click on Ok
 			DisputeDetail.click_Okbutton();
+			SeleniumMethods.staticwait(3000);
 			//Click on Cancel
 			DisputeDetail.click_Cancelbutton();
 			//Verify Dispute After Appproval

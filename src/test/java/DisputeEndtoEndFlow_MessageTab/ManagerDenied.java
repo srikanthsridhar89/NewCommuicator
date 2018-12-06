@@ -23,7 +23,7 @@ public class ManagerDenied {
 		@BeforeClass
 		public  void setUp() throws Exception
 		{
-			SeleniumMethods.initilization("Dispute Denied");
+			SeleniumMethods.initilization("Manager Denied");
 		}
 		
 		@Test
@@ -51,16 +51,18 @@ public class ManagerDenied {
 			NewDispute.click_NewDispute();
 			
 		
-	          Thread.sleep(4000);
+             
 			//Enter the details  Dispute
 			DisputePage DisputeCreation=new DisputePage();
+			
+			SeleniumMethods.staticwait(5000);
 			DisputeCreation.DisputeCreation(JsonReader.readJson("Dispute//Disputeinput","DisputeType"));
 		
-		
-		
+			
 		
 			DisputeCreation.click_submit();
-			SeleniumMethods.staticwait(3000);
+			
+			SeleniumMethods.staticwait(5000);
 			
 			//Verify Dispute Submitted
 			MyDisputePage MyDisp=new MyDisputePage();

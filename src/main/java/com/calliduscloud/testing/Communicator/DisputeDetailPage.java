@@ -11,14 +11,14 @@ import com.calliduscloud.testing.util.SeleniumMethods;
 public class DisputeDetailPage {
 
 	By DisputeSelection=By.xpath("//table/tbody/tr[1]/td[3]/div[2]/a");
-	By ApproveButton=By.xpath("//button[@class='btn btn-default cald_3D_button_default ng-binding' and contains(text(),'Approve')]");
+	By ApproveButton=By.xpath("//button[@class='btn btn-sm detail_view ng-binding btn-default' and contains(text(),'Approve')]");
 	By EnterComments=By.xpath(".//*[@id='comments_area']");
 	By OkButton=By.xpath(".//*[@id='ok_comment_btn']");
 	By AdminDeny=By.xpath("//button[@class='btn btn-sm detail_view ng-binding btn-default' and text()='Deny']");
 	By InquiryButton=By.xpath("//button[@class='btn btn-sm detail_view ng-binding btn-default' and text()='Send Inquiry']");
 	By CancelDisputeLocator=By.xpath("//button[contains(text(), 'Cancel Request')]");
 	By AdminResolverButton=By.xpath("//button[contains(text(),'Resolve')]");
-	By DenyButton=By.xpath("//button[@class='btn btn-default cald_3D_button_default ng-binding' and contains(text(),'Deny')]");
+	By DenyButton=By.xpath("//button[@class='btn btn-sm detail_view ng-binding btn-default' and contains(text(),'Deny')]");
 	By DisputeSubmited=By.xpath("//table/tbody/tr[1]/td[1]");
 	By DisputeSubmitted1=By.xpath("//table/tbody/tr[2]/td[1]");
 	By SentInquiryButton=By.xpath("//button[contains(text(),'Send Inquiry')]");
@@ -37,6 +37,7 @@ public class DisputeDetailPage {
 	}
 
 	public void check_DisputeDetail(){
+		SeleniumMethods.staticwait(8000);
 		SeleniumMethods.click(DisputeSubmited, "Select the Dispute Submitted");
 
 
@@ -73,10 +74,10 @@ public class DisputeDetailPage {
 	public void click_Approve() throws InterruptedException{
 
 
-
+SeleniumMethods.click(ApproveButton, "Click on Approve button");
 		//Click on Approve button
 		//SeleniumMethods.getAttribute(ApproveButton, attributeName, fieldName)
-		SeleniumMethods.javascript_click(ApproveButton, "Click on Approve button");
+		//SeleniumMethods.javascript_click(ApproveButton, "Click on Approve button");
 	}
 
 
